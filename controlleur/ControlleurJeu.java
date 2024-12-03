@@ -82,6 +82,9 @@ public class ControlleurJeu implements ActionListener {
                 jeu.getGrille().setEtatCellule(cellule[0], cellule[1], true);
             }
             rendu.repaint();
+        } else if (source == fenetre.getBoutonInverserCouleurs()) {
+            // Inverser les couleurs
+            rendu.inverserCouleurs();
         }
     }
 

@@ -11,6 +11,7 @@ public class Fenetre extends JFrame {
     private final JButton boutonLancer = new JButton("Lancer");
     private final JButton boutonPause = new JButton("Pause");
     private final JButton boutonReinitialiser = new JButton("Réinitialiser");
+    private final JButton boutonInverserCouleurs = new JButton("Inverser les couleurs");
 
     public Fenetre(JPanel gamePanel, List<String> nomsMotifs, ActionListener actionListener) {
         setTitle("Jeu de la Vie");
@@ -24,6 +25,7 @@ public class Fenetre extends JFrame {
         boutonPause.addActionListener(actionListener);
         boutonReinitialiser.addActionListener(actionListener);
         boutonVitesse.addActionListener(actionListener);
+        boutonInverserCouleurs.addActionListener(actionListener);
 
 
         controles.add(new JLabel("Motif :"));
@@ -32,6 +34,7 @@ public class Fenetre extends JFrame {
         controles.add(boutonLancer);
         controles.add(boutonPause);
         controles.add(boutonReinitialiser);
+        controles.add(boutonInverserCouleurs);
 
         // Organisation de la fenêtre
         setLayout(new BorderLayout());
@@ -61,5 +64,9 @@ public class Fenetre extends JFrame {
 
     public JButton getBoutonReinitialiser() {
         return boutonReinitialiser;
+    }
+
+    public JButton getBoutonInverserCouleurs() {
+        return boutonInverserCouleurs;
     }
 }
