@@ -88,5 +88,7 @@ public class ControlleurJeu implements ActionListener {
         }
     }
 
-
+    public JeuDeLaVie getJeu() {
+        return jeu;
+    }
 }
