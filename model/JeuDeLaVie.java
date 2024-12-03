@@ -3,8 +3,8 @@ package model;
 public class JeuDeLaVie {
     private Grille grille;
 
-    public JeuDeLaVie(int rows, int cols) {
-        this.grille = new Grille(rows, cols);
+    public JeuDeLaVie(int lignes, int colonnes) {
+        this.grille = new Grille(lignes, colonnes);
     }
 
     public Grille getGrille() {
@@ -12,6 +12,6 @@ public class JeuDeLaVie {
     }
 
     public void prochaineGeneration() {
-        grille.update();
+        grille.maj();
     }
 }

@@ -30,7 +30,7 @@ public class Grille {
         return new Cellule(false);
     }
 
-    public void update() {
+    public void maj() {
         Cellule[][] nouvelleGrille = new Cellule[lignes][colonnes];
 
         for (int i = 0; i < lignes; i++) {
@@ -71,5 +71,15 @@ public class Grille {
     public Cellule[][] getCellules() {
         return cellules;
     }
+
+    public void clear() {
+    for (int i = 0; i < lignes; i++) {
+        for (int j = 0; j < colonnes; j++) {
+            cellules[i][j].setEstVivant(false);
+        }
+    }
+}
+
+
 
 }
